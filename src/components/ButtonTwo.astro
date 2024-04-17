@@ -1,0 +1,13 @@
+---
+
+const { text = "Aceptar", isRounded = false } = Astro.props;
+
+---
+<button class:list = { ["bg-slate-600", "text-white", "px-2", "pt-1", "pb-2", "leading-3", "hover:bg-slate-800", "transition-colors", {rounded: isRounded}]} class="flex items-center h-10">
+   <slot name = "text" />
+   <div class="bg-slate-400 text-white rounded-lg mt-1 pb-1 px-1 ml-2 ">
+    <slot name = "icono" />
+</div>
+   
+
+</button>
