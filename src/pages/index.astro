@@ -3,20 +3,12 @@ import Layout from '../layouts/Layout.astro';
 import Button from '../components/Button.astro';
 import ButtonTwo from '../components/ButtonTwo.astro';
 import People from '../components/People.astro';
+import Counter from '../components/vue/Counter.vue'
 ---
 
 <Layout title="Welcome to Astro.">
-	<Button />
-	<Button text = "Cancelar" isRounded/>
-	<Button text = "Permitir" />
-
-	<ButtonTwo>
-		<span slot="text">Este es un Boton</span>
-		<span slot="icono">x</span>
-	</ButtonTwo>
-
-	<People />
-
+	<Counter client:visible>
+	</Counter>
 </Layout>
 
 
